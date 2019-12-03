@@ -1,0 +1,48 @@
+- When game loads:
+    - init()
+    - render msg
+    - After 2 secs: computer turn
+
+-Init():
+    - push 30 random numbers into computer array
+    - render()
+    - play()
+
+- Play:
+    - computerTurn()
+    - playerTurn()
+    - turn ++
+    - render()
+
+- Player turn:
+    - Player clicks on the color in the order
+    - Check if the order is right
+        - If yes:
+            - If winner (turn === 30): render winner msg
+            - If not winner: computerTurn()
+        - If no and strict mode on: render lost msg and init()
+        - If no and strict mode off: computer repeats
+
+- Computer turn:
+    - Depending on the turn:
+        - Check tempo
+        - flashColors() (number === turn)
+
+- flashColors():
+    - add timer for the duration of the change
+    - flash each color depending on the random number
+    - clearColors()
+
+- clearColors():
+    - add timer for the color to change back
+
+- Specific colors click:
+    - each color has a sound on click
+    - each color has a brighter color
+
+- Render():
+    - if winner: msg winner
+    - if lost: msg lost
+    - if not winner nor lost:
+        - phrases
+        - turnEl.innerhtml = turn
