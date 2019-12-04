@@ -52,7 +52,7 @@
         if (localStorage.getItem("level") === null) {
             localStorage.setItem("level", "30");
         }
-        window.open("index.html");
+        window.open("question1.html");
     });
 
     backBtn.addEventListener("click", back);

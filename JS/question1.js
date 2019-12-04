@@ -45,7 +45,7 @@
     //----Buttons event listeners----
 
     goBack.addEventListener("click", () => {
-        window.open("question.html");
+        window.open("index.html");
     });
 
     startBtn.addEventListener("click", () => {
