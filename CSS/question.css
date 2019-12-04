@@ -32,6 +32,9 @@ h1 {
 
 label {
     font-size: 20px;
+    text-align: center;
+    height: 50px;
+    width: 200px;
     margin: 0 auto;
 }
 
@@ -40,7 +43,11 @@ input {
     margin: 15px auto;
 }
 
-#level {
+#levelLabel {
+    display: none;
+}
+
+#levelInput {
     height: 30px;
     width: 100px;
     font-family: "Solway", serif;
@@ -64,6 +71,15 @@ button {
     border-radius: 20%;
     margin: 0 auto;
     cursor: pointer;
+    align-self: flex-end;
+}
+
+#backBtn {
+    display: none;
+}
+
+button:focus {
+    outline: none;
 }
 
 footer {

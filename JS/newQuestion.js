@@ -5,6 +5,8 @@
 
     let levelStr = localStorage.getItem("level");
 
+    console.log(levelStr);
+
     let computerArray = [];
 
     let gamerArray = [];
@@ -90,6 +92,7 @@
         } else {
             computerArray.push(Math.floor(Math.random() * 8) + 1);
         }
+        console.log(computerArray);
         computerTurn();
     }
 
@@ -141,6 +144,8 @@
         if (levelStr === "endless") {
             computerArray.push(Math.floor(Math.random() * 8) + 1);
         }
+        console.log(computerArray);
+        console.log(levelNum);
     }
 
     function playSound(name) {
@@ -258,6 +263,7 @@
             gamerArray.length === levelNum &&
             correct
         ) {
+            console.log(levelNum);
             winner = true;
             turnEl.innerHTML = "WIN!";
             setTimeout(() => {
