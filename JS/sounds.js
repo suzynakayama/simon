@@ -1,9 +1,7 @@
 (function() {
     //----Variables----
 
-    let winner, turn, correct, gamerTurn, on, levelNum;
-
-    let levelStr = localStorage.getItem("level");
+    let winner, turn, correct, gamerTurn, on;
 
     let computerArray = [];
 
@@ -62,7 +60,6 @@
             playSound("startBtn");
             turnEl.innerHTML = "";
             gamerArray = [];
-            computerArray = [];
             clearColors();
         }
     });
@@ -82,12 +79,7 @@
         turnEl.innerHTML = 1;
         correct = true;
         gamerTurn = false;
-        if (levelStr !== "endless") {
-            levelNum = parseInt(levelStr);
-            for (let i = 0; i < levelNum; i++) {
-                computerArray.push(Math.floor(Math.random() * 8) + 1);
-            }
-        } else {
+        for (let i = 0; i < 30; i++) {
             computerArray.push(Math.floor(Math.random() * 8) + 1);
         }
         computerTurn();
@@ -138,9 +130,6 @@
     function gamerTime() {
         clearColors();
         gamerTurn = true;
-        if (levelStr === "endless") {
-            computerArray.push(Math.floor(Math.random() * 8) + 1);
-        }
     }
 
     function playSound(name) {
@@ -253,18 +242,13 @@
     //----Check Winner Function----
 
     function checkWinner() {
-        if (
-            levelStr !== "endless" &&
-            gamerArray.length === levelNum &&
-            correct
-        ) {
+        if (gamerArray.length === 30 && correct) {
             winner = true;
             turnEl.innerHTML = "WIN!";
             setTimeout(() => {
                 gamerArray = [];
-                computerArray = [];
                 init();
-            }, 3000);
+            }, 1000);
         } else if (
             gamerArray[gamerArray.length - 1] !==
             computerArray[gamerArray.length - 1]

@@ -14,14 +14,24 @@
 
             <h3>What type of game would you like to play?</h3>
 
-            <label for="endless">
+            <label for="endless" id="endless">
                 Endless
-                <input type="radio" name="type" value="endless" id="endless" />
+                <input
+                    type="radio"
+                    name="type"
+                    value="endless"
+                    id="endlessRadio"
+                />
             </label>
 
-            <label for="leveled">
+            <label for="leveled" id="leveled">
                 Leveled
-                <input type="radio" name="type" value="leveled" id="leveled" />
+                <input
+                    type="radio"
+                    name="type"
+                    value="leveled"
+                    id="leveledRadio"
+                />
             </label>
 
             <label for="level" id="levelLabel">
@@ -29,7 +39,13 @@
                 <input type="text" id="levelInput" />
             </label>
 
-            <button>Play!</button>
+            <button id="backBtn">
+                Back
+            </button>
+
+            <button id="playBtn">
+                Play!
+            </button>
         </section>
 
         <footer>

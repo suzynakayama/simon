@@ -85,8 +85,6 @@ body {
     left: 15%;
 }
 
-/*TODO add divs in the middle of the colors for the cursor not to be pointer*/
-
 #innerTL,
 #innerTR,
 #innerBL,
@@ -157,6 +155,11 @@ button:focus {
     outline: 0;
 }
 
+#goBack {
+    position: absolute;
+    left: 30px;
+}
+
 #startCheck,
 #strictCheck {
     display: none;
@@ -181,7 +184,12 @@ h3 {
     margin-top: 65px;
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 30px;
+#soundsSource {
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 13px;
 }
