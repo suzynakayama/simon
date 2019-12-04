@@ -14,182 +14,74 @@ body {
     height: 100vh;
     width: 100vw;
     color: antiquewhite;
-    text-align: center;
 }
 
-#outerCircle {
-    position: relative;
-    border-radius: 50%;
-    width: 605px;
-    height: 605px;
-    margin: 70px auto;
-    margin-bottom: 30px;
-    border: 10px solid rgb(124, 116, 106);
-}
-
-#outerTL,
-#outerTR,
-#outerBL,
-#outerBR,
-#innerTL,
-#innerTR,
-#innerBL,
-#innerBR {
-    position: absolute;
-    box-shadow: 0px 0px 2px 5px rgba(255, 255, 255, 0.3) inset;
-    cursor: pointer;
-}
-
-#outerTL,
-#outerTR,
-#outerBL,
-#outerBR {
-    top: 50%;
-    left: 50%;
-    height: 300px;
-    width: 300px;
-    border: 8px solid antiquewhite;
-}
-
-#outerTL {
-    border-radius: 300px 0 0 0;
-    background-color: darkblue;
-    margin: -300px 0 0 -300px;
-}
-
-#outerTR {
-    border-radius: 0 300px 0 0;
-    background-color: darkgoldenrod;
-    margin: -300px 0 0 0;
-}
-
-#outerBL {
-    border-radius: 0 0 0 300px;
-    background-color: darkred;
-    margin: 0 -300px 0 -300px;
-}
-
-#outerBR {
-    border-radius: 0 0 300px 0;
-    background-color: darkgreen;
-    margin: 0 0 -300px 0;
-}
-
-#mediumCircle {
-    border-radius: 50%;
+section {
+    height: 500px;
     width: 400px;
-    height: 400px;
-    background-color: antiquewhite;
-    position: absolute;
-    top: 15%;
-    left: 15%;
-}
-
-#innerTL,
-#innerTR,
-#innerBL,
-#innerBR {
-    top: 49%;
-    left: 49%;
-    height: 200px;
-    width: 200px;
-    border: 13px solid antiquewhite;
-}
-
-#innerTL {
-    border-radius: 300px 0 0 0;
-    background-color: darkolivegreen;
-    margin: -190px 0 0 -190px;
-}
-
-#innerTR {
-    border-radius: 0 300px 0 0;
-    background-color: darkmagenta;
-    margin: -190px 0 0 0;
-}
-
-#innerBL {
-    border-radius: 0 0 0 300px;
-    background-color: darkorange;
-    margin: 0 -190px 0 -190px;
-}
-
-#innerBR {
-    border-radius: 0 0 300px 0;
-    background-color: darkcyan;
-    margin: 0 0 -190px 0;
-}
-
-#innerCircle {
-    border-radius: 50%;
-    width: 225px;
-    height: 225px;
-    background-color: antiquewhite;
-    position: absolute;
-    top: 23%;
-    left: 23%;
+    margin: 50px auto;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 h1 {
-    color: black;
-    margin-top: 35px;
-    font-size: 1.8em;
-    text-decoration: underline;
-    text-decoration-style: double;
+    margin: 50px auto;
 }
 
-button {
-    font-family: "Solway", serif;
-    font-weight: bold;
-    line-height: 30px;
-    height: 30px;
-    background-color: antiquewhite;
-    box-shadow: 2px 2px 2px #aaa;
-    border: 1px solid black;
-    border-radius: 20%;
-    margin: 0 15px;
-    cursor: pointer;
+label {
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    margin: 0 auto;
 }
 
-button:focus {
-    outline: 0;
+input {
+    display: block;
+    margin: 15px auto;
 }
 
-#goBack {
-    position: absolute;
-    left: 30px;
-}
-
-#startCheck,
-#strictCheck {
+#levelLabel {
     display: none;
 }
 
-#turn {
-    position: absolute;
-    background-color: rgb(20, 19, 19);
-    color: red;
-    font-size: 20px;
+#levelInput {
+    height: 30px;
+    width: 100px;
+    font-family: "Solway", serif;
+    font-size: 25px;
+    line-height: 30px;
     text-align: center;
-    line-height: 35px;
-    height: 35px;
-    width: 50px;
-    margin-left: 85px;
-    margin-top: 20px;
-    box-shadow: 2px 1px 8px 1px rgb(112, 8, 8) inset;
 }
 
-h3 {
-    color: black;
-    margin-top: 65px;
-}
-
-#soundsSource {
-    font-size: 13px;
-}
-
-a {
-    text-decoration: none;
+button {
+    display: block;
+    font-family: "Solway", serif;
+    font-weight: bold;
+    font-size: 18px;
     color: antiquewhite;
-    font-size: 13px;
+    line-height: 30px;
+    height: 30px;
+    width: 80px;
+    background-color: rgb(44, 63, 147);
+    box-shadow: 2px 2px 2px rgb(125, 151, 238) inset;
+    border: 1px solid rgb(4, 39, 104);
+    border-radius: 20%;
+    margin: 0 auto;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+#backBtn {
+    display: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+footer {
+    text-align: center;
 }

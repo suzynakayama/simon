@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Solway:400,700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Solway", serif;
+    background-image: radial-gradient(
+        circle,
+        rgba(117, 135, 228, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    height: 100vh;
+    width: 100vw;
+    color: antiquewhite;
+    text-align: center;
+}
+
+#outerCircle {
+    position: relative;
+    border-radius: 50%;
+    width: 605px;
+    height: 605px;
+    margin: 70px auto;
+    margin-bottom: 30px;
+    border: 10px solid rgb(124, 116, 106);
+}
+
+#outerTL,
+#outerTR,
+#outerBL,
+#outerBR,
+#innerTL,
+#innerTR,
+#innerBL,
+#innerBR {
+    position: absolute;
+    box-shadow: 0px 0px 2px 5px rgba(255, 255, 255, 0.3) inset;
+    cursor: pointer;
+}
+
+#outerTL,
+#outerTR,
+#outerBL,
+#outerBR {
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    width: 300px;
+    border: 8px solid antiquewhite;
+}
+
+#outerTL {
+    border-radius: 300px 0 0 0;
+    background-color: darkblue;
+    margin: -300px 0 0 -300px;
+}
+
+#outerTR {
+    border-radius: 0 300px 0 0;
+    background-color: darkgoldenrod;
+    margin: -300px 0 0 0;
+}
+
+#outerBL {
+    border-radius: 0 0 0 300px;
+    background-color: darkred;
+    margin: 0 -300px 0 -300px;
+}
+
+#outerBR {
+    border-radius: 0 0 300px 0;
+    background-color: darkgreen;
+    margin: 0 0 -300px 0;
+}
+
+#mediumCircle {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+#innerTL,
+#innerTR,
+#innerBL,
+#innerBR {
+    top: 49%;
+    left: 49%;
+    height: 200px;
+    width: 200px;
+    border: 13px solid antiquewhite;
+}
+
+#innerTL {
+    border-radius: 300px 0 0 0;
+    background-color: darkolivegreen;
+    margin: -190px 0 0 -190px;
+}
+
+#innerTR {
+    border-radius: 0 300px 0 0;
+    background-color: darkmagenta;
+    margin: -190px 0 0 0;
+}
+
+#innerBL {
+    border-radius: 0 0 0 300px;
+    background-color: darkorange;
+    margin: 0 -190px 0 -190px;
+}
+
+#innerBR {
+    border-radius: 0 0 300px 0;
+    background-color: darkcyan;
+    margin: 0 0 -190px 0;
+}
+
+#innerCircle {
+    border-radius: 50%;
+    width: 225px;
+    height: 225px;
+    background-color: antiquewhite;
+    position: absolute;
+    top: 23%;
+    left: 23%;
+}
+
+h1 {
+    color: black;
+    margin-top: 35px;
+    font-size: 1.8em;
+    text-decoration: underline;
+    text-decoration-style: double;
+}
+
+button {
+    font-family: "Solway", serif;
+    font-weight: bold;
+    line-height: 30px;
+    height: 30px;
+    background-color: antiquewhite;
+    box-shadow: 2px 2px 2px #aaa;
+    border: 1px solid black;
+    border-radius: 20%;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#goBack {
+    position: absolute;
+    left: 30px;
+}
+
+#startCheck,
+#strictCheck {
+    display: none;
+}
+
+#turn {
+    position: absolute;
+    background-color: rgb(20, 19, 19);
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    width: 50px;
+    margin-left: 85px;
+    margin-top: 20px;
+    box-shadow: 2px 1px 8px 1px rgb(112, 8, 8) inset;
+}
+
+h3 {
+    color: black;
+    margin-top: 65px;
+}
+
+#soundsSource {
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 13px;
+}
