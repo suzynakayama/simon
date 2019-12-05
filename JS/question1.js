@@ -1,5 +1,5 @@
 (function() {
-    //----Variables----
+    //---- Variables ----
 
     let winner, turn, correct, gamerTurn, on, levelNum;
 
@@ -22,10 +22,11 @@
         innerBR: "./Sounds/beep8.wav",
         strictBtn: "./Sounds/strictBtn.wav",
         startBtn: "./Sounds/game-start.wav",
-        wrongAnswer: "./Sounds/game-over.wav"
+        wrongAnswer: "./Sounds/game-over.wav",
+        winner: "./Sounds/winner.wav"
     };
 
-    //----Cached elements----
+    //---- Cached elements ----
 
     const goBack = document.getElementById("goBack");
     const outerTL = document.getElementById("outerTL");
@@ -42,9 +43,10 @@
     const strictCheck = document.getElementById("strictCheck");
     const turnEl = document.getElementById("turn");
 
-    //----Buttons event listeners----
+    //---- Buttons Event Listeners ----
 
     goBack.addEventListener("click", () => {
+        localStorage.clear();
         window.open("index.html");
     });
 
@@ -74,7 +76,7 @@
         }
     });
 
-    //----Game functions----
+    //---- Game functions ----
 
     function init() {
         winner = false;
@@ -124,15 +126,15 @@
     }
 
     function countTimer() {
-        if (turn < 4) return 850;
-        if (4 >= turn && turn < 9) return 750;
-        if (9 >= turn && turn < 13) return 650;
-        if (13 >= turn && turn < 17) return 550;
-        if (17 >= turn && turn < 21) return 450;
-        if (21 >= turn && turn < 25) return 350;
-        if (25 >= turn && turn < 29) return 250;
-        if (turn === 29) return 200;
-        if (turn === 30) return 120;
+        if (turn < 4) return 600;
+        if (4 >= turn && turn < 9) return 500;
+        if (9 >= turn && turn < 13) return 400;
+        if (13 >= turn && turn < 17) return 350;
+        if (17 >= turn && turn < 21) return 300;
+        if (21 >= turn && turn < 25) return 250;
+        if (25 >= turn && turn < 29) return 200;
+        if (turn === 29) return 170;
+        if (turn >= 30) return 120;
     }
 
     function gamerTime() {
@@ -148,7 +150,7 @@
         soundPlayer.play();
     }
 
-    //----Color changes----
+    //---- Color Changes ----
 
     function outerTLPlay() {
         if (on) {
@@ -217,7 +219,7 @@
         innerBR.style.backgroundColor = "darkcyan";
     }
 
-    //----Color event listeners----
+    //---- Color event listeners ----
 
     function handlePlayerClick(num, playFn) {
         return function() {
@@ -250,7 +252,7 @@
 
     innerBR.addEventListener("click", handlePlayerClick(8, innerBRPlay));
 
-    //----Check Winner Function----
+    //---- Check Winner Function ----
 
     function checkWinner() {
         if (
@@ -258,13 +260,16 @@
             gamerArray.length === levelNum &&
             correct
         ) {
-            winner = true;
-            turnEl.innerHTML = "WIN!";
             setTimeout(() => {
-                gamerArray = [];
-                computerArray = [];
-                init();
-            }, 3000);
+                winner = true;
+                turnEl.innerHTML = "WIN!";
+                playSound("winner");
+                setTimeout(() => {
+                    gamerArray = [];
+                    computerArray = [];
+                    init();
+                }, 3000);
+            }, 800);
         } else if (
             gamerArray[gamerArray.length - 1] !==
             computerArray[gamerArray.length - 1]

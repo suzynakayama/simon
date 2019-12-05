@@ -1,8 +1,5 @@
 (function() {
-    document.querySelector("h1").addEventListener("click", () => {
-        localStorage.clear();
-    });
-
+    //---- Variables and Cached Elements ----
     let level;
 
     const endless = document.getElementById("endlessRadio");
@@ -11,8 +8,7 @@
     const playBtn = document.getElementById("playBtn");
     const backBtn = document.getElementById("backBtn");
 
-    leveled.addEventListener("click", appearInput);
-    endless.addEventListener("click", endlessLevel);
+    //---- Functions ----
 
     function appearInput() {
         if (leveled.checked) {
@@ -45,8 +41,14 @@
             document.getElementById("levelLabel").style.display = "none";
             backBtn.style.display = "none";
             leveled.checked = false;
+            levelInput.value = "";
         }, 500);
     }
+
+    //---- Event Listeners ----
+    leveled.addEventListener("click", appearInput);
+
+    endless.addEventListener("click", endlessLevel);
 
     playBtn.addEventListener("click", () => {
         if (localStorage.getItem("level") === null) {
@@ -56,4 +58,9 @@
     });
 
     backBtn.addEventListener("click", back);
+
+    //---- Clearing local storage for testing ----
+    document.querySelector("h1").addEventListener("click", () => {
+        localStorage.clear();
+    });
 })();

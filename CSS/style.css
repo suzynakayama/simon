@@ -45,6 +45,7 @@ input {
 
 #levelLabel {
     display: none;
+    margin-left: 27%;
 }
 
 #levelInput {
@@ -72,10 +73,12 @@ button {
     margin: 0 auto;
     cursor: pointer;
     align-self: flex-end;
+    justify-self: center;
 }
 
 #backBtn {
     display: none;
+    margin-left: 20%;
 }
 
 button:focus {
