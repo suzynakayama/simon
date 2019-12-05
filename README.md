@@ -50,4 +50,4 @@ How to play:
 
 ### Next Steps
 
-Implement a two person game, with two simons side by side and each person plays in one of them.
+Implement a two-player game, with two simons side by side and each person plays in one of them.
