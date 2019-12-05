@@ -8,6 +8,8 @@ Also known for creating the first video game system, inventor **Ralph Baer** and
 
 Named after the children's game of _Simon Says_, the game was released by **Milton Bradley Company** in 1978 with a midnight release party at Studio 54, the elite disco in NYC at the time.
 
+[Reference](https://americanhistory.si.edu/collections/search/object/nmah_1302005)
+
 ---
 
 ### Some Screenshots
@@ -42,8 +44,10 @@ How to play:
     -   If you want to play on strict mode, click on strict mode button
         -   Strict Mode: if you press the wrong order, you will start from the beginning
 -   Copy the computer order
--   Enjoy!
+-   Enjoy! :wink:
 
 ---
 
 ### Next Steps
+
+Implement a two person game, with two simons side by side and each person plays in one of them.
