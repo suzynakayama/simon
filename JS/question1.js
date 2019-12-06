@@ -279,6 +279,7 @@
                 turnEl.innerHTML = "NO!";
                 setTimeout(() => {
                     gamerArray = [];
+                    computerArray = [];
                     init();
                 }, 800);
             } else {
