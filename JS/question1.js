@@ -82,7 +82,7 @@
         winner = false;
         turn = 1;
         turnEl.innerHTML = 1;
-        correct = true;
+        correct = false;
         gamerTurn = false;
         if (levelStr !== "endless") {
             levelNum = parseInt(levelStr);
@@ -256,24 +256,37 @@
 
     function checkWinner() {
         if (
-            levelStr !== "endless" &&
-            gamerArray.length === levelNum &&
-            correct
-        ) {
-            setTimeout(() => {
-                winner = true;
-                turnEl.innerHTML = "WIN!";
-                playSound("winner");
-                setTimeout(() => {
-                    gamerArray = [];
-                    computerArray = [];
-                    init();
-                }, 3000);
-            }, 800);
-        } else if (
-            gamerArray[gamerArray.length - 1] !==
+            gamerArray[gamerArray.length - 1] ===
             computerArray[gamerArray.length - 1]
         ) {
+            correct = true;
+            if (
+                levelStr !== "endless" &&
+                gamerArray.length === levelNum &&
+                correct
+            ) {
+                setTimeout(() => {
+                    winner = true;
+                    turnEl.innerHTML = "WIN!";
+                    playSound("winner");
+                    setTimeout(() => {
+                        gamerArray = [];
+                        computerArray = [];
+                        init();
+                    }, 3000);
+                }, 800);
+            } else if (gamerArray.length === turn) {
+                turn++;
+                turnEl.innerHTML = turn;
+                gamerArray = [];
+                flashIndex = 0;
+                correct = true;
+                computerTurn();
+            }
+        } /*if (
+            gamerArray[gamerArray.length - 1] !==
+            computerArray[gamerArray.length - 1]
+        ) */ else {
             if (strictCheck.checked) {
                 playSound("wrongAnswer");
                 turnEl.innerHTML = "NO!";
@@ -292,13 +305,6 @@
                     computerTurn();
                 }, 800);
             }
-        } else if (gamerArray.length === turn) {
-            turn++;
-            turnEl.innerHTML = turn;
-            gamerArray = [];
-            flashIndex = 0;
-            correct = true;
-            computerTurn();
         }
     }
 })();

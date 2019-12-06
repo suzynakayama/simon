@@ -15,15 +15,21 @@
             setTimeout(() => {
                 document.getElementById("leveled").style.display = "none";
                 document.getElementById("endless").style.display = "none";
+                playBtn.style.display = "none";
                 document.getElementById("levelLabel").style.display = "block";
                 backBtn.style.display = "block";
             }, 500);
+
             setTimeout(() => {
                 if (levelInput.value) {
                     level = levelInput.value;
                     localStorage.setItem("level", `${level}`);
                 }
-            }, 3000);
+            }, 2500);
+            setTimeout(() => {
+                backBtn.style.marginLeft = "20%";
+                playBtn.style.display = "block";
+            }, 3300);
         }
     }
 
