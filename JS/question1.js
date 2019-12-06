@@ -283,10 +283,7 @@
                 correct = true;
                 computerTurn();
             }
-        } /*if (
-            gamerArray[gamerArray.length - 1] !==
-            computerArray[gamerArray.length - 1]
-        ) */ else {
+        } else {
             if (strictCheck.checked) {
                 playSound("wrongAnswer");
                 turnEl.innerHTML = "NO!";

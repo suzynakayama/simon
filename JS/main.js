@@ -64,9 +64,4 @@
     });
 
     backBtn.addEventListener("click", back);
-
-    //---- Clearing local storage for testing ----
-    document.querySelector("h1").addEventListener("click", () => {
-        localStorage.clear();
-    });
 })();
