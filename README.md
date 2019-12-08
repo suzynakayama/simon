@@ -33,7 +33,9 @@ Named after the children's game of _Simon Says_, the game was released by **Milt
 
 ### Play
 
-You can play Simon 2.0 World in here: <https://suzynakayama.github.io/simon/>
+You can play Simon 2.0 World here: <https://suzynakayama.github.io/simon/>
+
+You can also play on your phone! 
 
 How to play:
 
