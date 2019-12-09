@@ -21,15 +21,9 @@
             }, 500);
 
             setTimeout(() => {
-                if (levelInput.value) {
-                    level = levelInput.value;
-                    localStorage.setItem("level", `${level}`);
-                }
-            }, 2500);
-            setTimeout(() => {
                 backBtn.style.marginLeft = "20%";
                 playBtn.style.display = "block";
-            }, 3300);
+            }, 3000);
         }
     }
 
@@ -48,6 +42,7 @@
             backBtn.style.display = "none";
             leveled.checked = false;
             levelInput.value = "";
+            localStorage.clear();
         }, 500);
     }
 
@@ -57,7 +52,10 @@
     endless.addEventListener("click", endlessLevel);
 
     playBtn.addEventListener("click", () => {
-        if (localStorage.getItem("level") === null) {
+        if (levelInput.value) {
+            level = levelInput.value;
+            localStorage.setItem("level", `${level}`);
+        } else if (localStorage.getItem("level") === null) {
             localStorage.setItem("level", "30");
         }
         window.open("question1.html");

@@ -56,6 +56,7 @@
             on = true;
             turnEl.innerHTML = "- -";
             playSound("startBtn");
+            startBtn.textContent = "STOP";
             setTimeout(() => {
                 init();
             }, 500);
@@ -63,6 +64,7 @@
             on = false;
             playSound("startBtn");
             turnEl.innerHTML = "";
+            startBtn.textContent = "START";
             gamerArray = [];
             computerArray = [];
             clearColors();
